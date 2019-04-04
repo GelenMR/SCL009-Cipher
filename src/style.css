@@ -1,1 +1,11 @@
-/* Acá va tu código */
+body{
+    background-image: url("image/fondo.jpg");
+    background-repeat: no-repeat;
+  }
+  div{
+    margin: 0 auto;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+    padding: 1em 2em;
+    text-align: center;
+  }
