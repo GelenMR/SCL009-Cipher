@@ -1,15 +1,38 @@
+<!--documentNode-->
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="es"><!--Html - Nodo tipo elemento-->
+  <head><!--Head - Nodo tipo elemento-->
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <!--Meta-Nodo tipo elemento/Charset-Nodo hijo tipo Atributo-->
+    <title>Mensajeria en Código</title><!--Title-Nodo tipo elemento/'Cease Cipher'-Nodo hijo tipo texto-->
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body><!--Body - Nodo tipo elemento (hijo de htmlElement)-->
     <div id="root">
-      <h1>Hola mundo!</h1>
+      <h1>Mensajes Privados Codificados</h1>
+      <h3><i>Envia mensajes importantes sin riesgo de ser expuestos.</i></h3>
+      <h2>Intrucciones</h2>
+    
+      <p><b>Ingresa tu Mensaje a Cifrar</b></p>
+      <!--Cuadro de texto para ingresar mensaje a cifrar-->
+      <textarea type="text" id="textToEncode" rows="10" cols="40"></textarea><br>
+      <button id="clearTextToEncode">Limpiar</button>
+      <br>
+      <p>Ingresa un Código Númerico</p>
+      <!--Cuadro de texto para ingresar el OffSet (desplazmiento) de cifrado-->
+      <input id="offset"> 
+      <p>Este código sera un número que servira como llave tanto para el cifrado como descifrado de tu mensaje</p>
+      <br>
+      <button id="sendTextToEncode">Cifrar</button>
+      <button id="sendTextToDecode">Descifrar</button>
+      <p><b>Este es tu Mensaje Cifrado</b></p>
+      <!--Cuadro de texto que muestra resultado del cifrado-->
+      <textarea type="text" id="resultEncode" rows="10" cols="40"></textarea><br>
+      <button id="clearResultEncode">Limpiar</button>  
+
     </div>
-    <script src="cipher.js"></script>
     <script src="index.js"></script>
+    <script src="cipher.js"></script>
+    <footer>By GelenMR.</footer>
   </body>
 </html>
