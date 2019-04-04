@@ -5,7 +5,7 @@ window.cipher = {
     encode: (offset, textToEncode) => {
     solved = '';
     for(let i = 0; i < textToEncode.length; i++ ){
-        console.log(textToEncode[i].charCodeAt());
+        //console.log(textToEncode[i].charCodeAt());
         //variable que guarda la posicion de la letra en el codigo ASCII
         asciiPos = textToEncode[i].charCodeAt(); 
         if(asciiPos>=65 && asciiPos<=(90-offset)){
@@ -26,7 +26,7 @@ window.cipher = {
     decode: (offset, textToEncode) => {
         solvedDecode = '';
         for(let i = 0; i < textToEncode.length; i++ ){
-            console.log(textToEncode[i].charCodeAt());
+            //console.log(textToEncode[i].charCodeAt());
             //variable que guarda la posicion de la letra en el codigo ASCII
             asciiPos = textToEncode[i].charCodeAt(); 
             if(asciiPos>=65 && asciiPos<=(90-offset)){
