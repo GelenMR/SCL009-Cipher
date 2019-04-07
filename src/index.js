@@ -20,4 +20,11 @@ btnSendTextToDecode.addEventListener("click",() => {
     offset = parseInt(document.getElementById("offset").value);
     document.getElementById("resultEncode").innerHTML = window.cipher.decode(offset, textToEncode);
 });
+//BOTON LIMPIAR
+const btnclearResultEncode = document.getElementById("clearResultEncode");
+btnclearResultEncode.addEventListener("click",() => {
+    textToEncode = document.getElementById("textToEncode").value = "";  
+    offset = document.getElementById("offset").value = "";
+    document.getElementById("resultEncode").value = "";
+});
 
