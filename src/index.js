@@ -23,8 +23,9 @@ btnSendTextToDecode.addEventListener("click",() => {
 //BOTON LIMPIAR
 const btnclearResultEncode = document.getElementById("clearResultEncode");
 btnclearResultEncode.addEventListener("click",() => {
-    textToEncode = document.getElementById("textToEncode").value = "";  
-    offset = document.getElementById("offset").value = "";
-    document.getElementById("resultEncode").value = "";
+    location.reload();
+    //textToEncode = document.getElementById("textToEncode").value = "";  
+    //offset = document.getElementById("offset").value = "";
+    //document.getElementById("resultEncode").value = "";
 });
 
