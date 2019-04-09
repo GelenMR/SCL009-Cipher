@@ -16,10 +16,10 @@ window.cipher = {
             solved += String.fromCharCode((asciiPos-97+offset)%26+97);
         } else if(asciiPos>=48 && asciiPos<=57) {
             solved += String.fromCharCode((asciiPos-48+offset)%10+48);
-        } else if(asciiPos=164) {
+        } else if(asciiPos==241) {
             solved += String.fromCharCode(38);
-        } else if(asciiPos=165) {
-            solved += String.fromCharCode(38);
+        } else if(asciiPos==209) {
+            solved += String.fromCharCode(37);
         } else {
             //guarda lo que encuentre en la cadena que no este dentro de los parametros anteriores
             solved += textToEncode[i];
@@ -41,10 +41,10 @@ window.cipher = {
                 solvedDecode += String.fromCharCode((asciiPos-97+offsetDec)%26+97);
             } else if(asciiPos>=48 && asciiPos<=57) {
                 solvedDecode += String.fromCharCode((asciiPos-48+offsetDecN)%10+48);
-            } else if(asciiPos=38) {
-                solvedDecode += String.fromCharCode(164);
-            } else if(asciiPos=38) {
-                solvedDecode += String.fromCharCode(165);
+            } else if(asciiPos==38) {
+                solvedDecode += String.fromCharCode(241);
+            } else if(asciiPos==37) {
+                solvedDecode += String.fromCharCode(209);
             } else {
                 //guarda lo que encuentre en la cadena que no este dentro de los parametros anteriores
                 solvedDecode +=textToEncode[i];
