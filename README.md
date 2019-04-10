@@ -56,7 +56,7 @@ El _boilerplate_ contiene una estructura de archivos así como toda la configura
 
 ## Como Usar
 #### Landing Page
-Para acceder a la aplicación debes copiar la siguiente dirección en cualquier navegador: GelenMR.github.io/SCL009-Cipher/src/index.html
+Para acceder a la aplicación debes copiar la siguiente dirección en cualquier navegador: GelenMR.github.io/SCL009-Cipher/src/index.html o hacer click [aqui](GelenMR.github.io/SCL009-Cipher/src/index.html)
 
 ## Recursos y temas relacionados
 
