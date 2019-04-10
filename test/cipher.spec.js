@@ -18,15 +18,15 @@ describe('cipher', () => {
     it('debería retornar espacios y/o caracteres especiales que se encuentren en el mensaje original', () => {
       assert.equal(window.cipher.encode(15, 'Hola Mundo!'), 'Wdap Bjcsd!');
     });
-    // it('deberia ser un numero',() => {
-    //   assert.equal(typeof offset, 'number');
-    // });
-    // it('deberia ser un string',() => {
-    //   assert.equal(typeof textToEncode, 'string');
-    // });
-    // it('deberia ser un string',() => {
-    //   assert.equal(typeof resultEncode, 'string');
-    // });
+    it('deberia retornar numeros "1234567890" para "4567890123" con offset 33',() => {
+      assert.equal(window.cipher.encode(33, '01-06-1983'), '34-39-4216');
+    });
+    it('deberia retornar "&" para "ñ" con offset 13',() => {
+      assert.equal(window.cipher.encode(13, 'Muñeca'), 'Zh&rpn');
+    });
+    it('deberia retornar "%" para "Ñ" con offset 19',() => {
+      assert.equal(window.cipher.encode(19, 'ÑAME'), '%TFX');
+    });
   });
 
   describe('cipher.decode', () => {
@@ -40,8 +40,17 @@ describe('cipher', () => {
     it('debería retornar "abcdefghijklmnopqrstuvwxyz" para "uvwxyzabcdefghijklmnopqrst" con offset 20', () => {
       assert.equal(window.cipher.decode(20, 'wbui'), 'chao');
     });
-    it('debería retornar espacios y/o caracteres especiales que se encuentren en el mensaje cifrado', () => {
+    it('debería retornar espacios y/o caracteres especiales que se encuentren en el mensaje cifrado con offset 15', () => {
       assert.equal(window.cipher.decode(15, 'Wdap Bjcsd!'), 'Hola Mundo!');
+    });
+    it('deberia retornar numeros "4567890123" para "1234567890" con offset 33',() => {
+      assert.equal(window.cipher.decode(33, '34-39-4216'), '01-06-1983');
+    });
+    it('deberia retornar "&" para "ñ" con offset 13',() => {
+      assert.equal(window.cipher.decode(13, 'Zh&rpn'), 'Muñeca');
+    });
+    it('deberia retornar "%" para "Ñ" con offset 19',() => {
+      assert.equal(window.cipher.decode(19, '%TFX'), 'ÑAME');
     });
   });
 

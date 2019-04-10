@@ -2,40 +2,39 @@
 <html lang="es"><!--Html - Nodo tipo elemento-->
   <head><!--Head - Nodo tipo elemento-->
     <meta charset="utf-8"><!--Meta-Nodo tipo elemento/Charset-Nodo hijo tipo Atributo-->
-    <title>Mensajeria en Código</title><!--Title-Nodo tipo elemento/'Cease Cipher'-Nodo hijo tipo texto-->
+    <title>InfoCodificada</title><!--Title-Nodo tipo elemento/'Cease Cipher'-Nodo hijo tipo texto-->
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://www.shareicon.net/download/2017/05/09/885775_green_512x512.png">
   </head>
   <body><!--Body - Nodo tipo elemento (hijo de htmlElement)-->
     <div id="root">
-      <h1>Mensajes Privados Codificados</h1>
-      <h2><i>Envia información importante sin riesgo de ser expuesta.</i></h2>
+      <h1>Cuida tu Información Sensible</h1>
+      <h2><i>Al codificar tus datos, estos se hacen irreconocibles a cualquier persona que no posea tu clave.
+        <br>Protege datos importantes y evita el riesgo de ser expuestos.</i></h2>
       <!-- <h2>Intrucciones</h2> -->
       <div class="third">
-        <h3>Ingresa tu Mensaje a Cifrar</h3>
+        <h3>Ingresa aqui la información a Cifrar/Desifrar</h3>
         <!--Cuadro de texto para ingresar mensaje a cifrar-->
-        <textarea type="text" id="textToEncode" rows="10" cols="40" required="required"></textarea><br> 
+        <textarea id="textToEncode" rows="10" cols="40" required="required"></textarea><br> 
       </div>
       <div class="third">
         <h3>Ingresa una Clave Númerica</h3>
         <!--Cuadro de texto para ingresar el OffSet (desplazmiento) de cifrado-->
         <input id="offset" type="number" min="1" required="required"> 
-        <p><i>Esta clave debe ser un número que servira como llave tanto para 
-        <br>el cifrado como descifrado de tu mensaje</i></p>
+        <p><i>Esta clave debe ser un número que servira como llave tanto para el cifrado como descifrado de tu mensaje</i></p>
         <button id="sendTextToEncode"> Cifrar </button>
         <button id="sendTextToDecode">Descifrar</button>
       </div>
       <div class="third">
-        <h3>Este es tu Mensaje Cifrado</h3>
+        <h3>Esta es tu Información Cifrada</h3>
         <!--Cuadro de texto que muestra resultado del cifrado-->
-        <textarea type="text" id="resultEncode" rows="10" cols="40"></textarea><br>
+        <textarea id="resultEncode" rows="10" cols="40"></textarea><br>
       </div>
       <br>
       <button id="clearResultEncode">Limpiar</button>  
-
     </div>
     <script src="index.js"></script>
     <script src="cipher.js"></script>
-    <footer><p>By GelenMR - Laboratoria.</p></footer>
+    <!-- <footer><p>By GelenMR - Laboratoria.</p></footer> --> 
   </body>
 </html>
