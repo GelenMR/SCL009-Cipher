@@ -9,16 +9,16 @@ window.cipher = {
     for(let i = 0; i < textToEncode.length; i++ ){
         //variable que guarda la posicion de la letra en el codigo ASCII
         asciiPos = textToEncode[i].charCodeAt(); 
-        if(asciiPos>=65 && asciiPos<=90){
+        if(asciiPos>=65 && asciiPos<=90){//MAYUSCULAS
             //variable que guarda la conversion a cadena del numero de posicion ASCII desplazada las posiciones que el usuario indique
             solved += String.fromCharCode((asciiPos-65+offset)%26+65);            
-        } else if(asciiPos>=97 && asciiPos<=122) {
+        } else if(asciiPos>=97 && asciiPos<=122) {//MINUSCULAS
             solved += String.fromCharCode((asciiPos-97+offset)%26+97);
-        } else if(asciiPos>=48 && asciiPos<=57) {
+        } else if(asciiPos>=48 && asciiPos<=57) {//NÚMEROS
             solved += String.fromCharCode((asciiPos-48+offset)%10+48);
-        } else if(asciiPos==241) {
+        } else if(asciiPos==241) {//Ñ
             solved += String.fromCharCode(38);
-        } else if(asciiPos==209) {
+        } else if(asciiPos==209) {//Ñ
             solved += String.fromCharCode(37);
         } else {
             //guarda lo que encuentre en la cadena que no este dentro de los parametros anteriores

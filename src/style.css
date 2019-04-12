@@ -9,7 +9,7 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     margin:0px;
   }
-  #root{
+  section{
     box-sizing: border-box;
     /*padding: 1em 2em;*/
     text-align: center;
